@@ -11,12 +11,14 @@ def no_space(texto):
 def reverse (texto):
     texto_al_reves = ""
     for char in texto:
-        texto_al_reves += char + texto_al_reves
+        texto_al_reves += char 
     return texto_al_reves
 
 def es_palindromo (texto):
     texto = no_space(texto)
+    print(f"texto sin esoacio:  {texto}")
     texto_al_reves = reverse (texto)
+    print(f"texto alreves:  {texto_al_reves}")
     return texto.lower() == texto_al_reves.lower()
 
 
