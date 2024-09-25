@@ -26,3 +26,9 @@ print(nombres3)
 #filtra y transforma
 nombres3 = [usuario[0] for usuario in usuarios if usuario[1]>2]
 print(nombres3)
+
+nombres4 = list(map(lambda usuario: usuario[0], usuarios))
+print (nombres4)
+
+nombres5 = list( filter (lambda usuario: usuario[1] > 2,usuarios))
+print (nombres5)
