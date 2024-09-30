@@ -1,22 +1,30 @@
 """ultimate python"""
 """https://www.udemy.com/course/ultimate-python-de-cero-a-programador-experto/"""
-""" Lecture 97 """
+""" Lecture 97 ,98"""
 
 
-# import correa
+from pathlib import Path
 
-# class Perro:
-#     def __init__(self,Correa):
-#         self.correa = Correa()
+import db
+import graphql
+import api
 
+path = Path()
 
-# import usuario
+paths = [p for p in path.iterdir() if p.is_dir() ]
 
-# def guardar():
-#     usuario.guardar()
+dependencias = {
+    "db" : db,
+    "api": api,
+    "graphl":graphql
+}
 
-# def guardar(entidad):
-#     entidad.guardar()
+def load(p):
+    #print(str(p).replace("/","."))
+    paquete = __import__(str(p).replace("/","."))
+    try:
+        paquete.init(**dependencias)
+    except:
+        print("El paquete no tiene funcion init")
 
-
-
+list(map(load,paths))
