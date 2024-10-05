@@ -1,7 +1,7 @@
 #
 # Course: ultimate python
 # https://www.udemy.com/course/ultimate-python-de-cero-a-programador-experto/
-# Lecture 133
+# Lecture 134
 #
 #
 #
@@ -11,7 +11,12 @@
 import requests
 
 url = "https://jsonplaceholder.typicode.com/users"
-r = requests.get(url,timeout=20)
+apikey= "23r4123qwer4123erewf"
+headers = {
+    "Authorization":f"Bearer {apikey}"
+}
+
+r = requests.get(url,timeout=20,headers=headers)
 print (r.text)
 
 r= r.json()
