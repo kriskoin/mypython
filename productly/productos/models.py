@@ -5,7 +5,7 @@ from django.db import models
 class Categoria(models.Model):
     nombre = models.CharField(max_length=255)
 
-class Poeducto(models.Model):
+class Producto(models.Model):
     nombre = models.CharField(max_length=255)
     stock = models.IntegerField()
     puntaje = models.FloatField()
