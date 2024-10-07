@@ -4,4 +4,8 @@ with the course
 ### https://www.udemy.com/course/ultimate-python-de-cero-a-programador-experto/
 
 # some plugings
-pipenv install pylint-django
+pip install pipenv
+pip install --upgrade pipenv
+sudo pip install --upgrade pipenv
+pipenv install django==4.1.7
+pipenv install pylint-djang
